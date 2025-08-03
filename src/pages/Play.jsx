@@ -6,7 +6,7 @@ import mobileVideo from "../assets/kakashi-mobile-wallpaper.mp4";
 import Timer from "../components/Timer";
 import AudioController from "../../AudioController";
 
-export default function Play({ setGameOver }) {
+export default function Play({ setGameOver, setStatus, setWinGame }) {
   const [characters, setCharacters] = useState([]);
   const [clickedCharacters, setClickedCharacters] = useState([]);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
@@ -54,15 +54,23 @@ export default function Play({ setGameOver }) {
     setLastClick(time);
     setHot((prev) => prev + 1);
   }
+  function handleGameOver() {
+    setStatus({
+      time: time,
+      score: score,
+      hot: hot,
+    });
+    AudioController.stop_morning();
+    AudioController.play_gameover();
+    AudioController.play_itachi();
+    setGameOver(true);
+  }
   async function handleCardClick(e) {
     AudioController.play_sowrd();
 
     const clickedChar = await api.getCharById(Number(e.currentTarget.id));
-    console.log(clickedChar);
     if (clickedCharacters.includes(clickedChar)) {
-      AudioController.stop_morning();
-      AudioController.play_gameover();
-      setGameOver(true);
+      handleGameOver();
       return;
     }
     handleHotClick();
@@ -72,7 +80,6 @@ export default function Play({ setGameOver }) {
   }
   useEffect(() => {
     function selectChar(newChars) {
-      console.log("hi");
       setSelectedCharacters(
         [
           ...getRandomElements(characters, newChars),
@@ -110,7 +117,19 @@ export default function Play({ setGameOver }) {
       setMaxHot(hot);
     }
   }, [hot, maxHot]);
-
+  function handleWin() {
+    setStatus({
+      time: time,
+      score: score,
+      hot: hot,
+    });
+    AudioController.stop_morning();
+    AudioController.play_obito();
+    setWinGame(true);
+  }
+  if (score === 50) {
+    handleWin();
+  }
   return (
     <div className="home main-container">
       <video key={videoSrc} autoPlay muted loop id="bg-video">

@@ -5,9 +5,9 @@ import "../styles/Home.css";
 
 import AudioController from "../../AudioController";
 
-export default function Home({ setCurrentPage, setGameOver }) {
+export default function Home({ setCurrentPage, setGameOver, sound_init }) {
   const [videoSrc, setVideoSrc] = useState(desktopVideo);
-  const [togelSound, setTogelSound] = useState(0);
+  const [togelSound, setTogelSound] = useState(sound_init);
   useEffect(() => {
     const updateVideoSource = () => {
       if (window.innerWidth <= 768) {

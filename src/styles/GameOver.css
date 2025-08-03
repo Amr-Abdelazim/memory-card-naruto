@@ -1,0 +1,37 @@
+.gameover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
+.status-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Comic Relief", cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 8px #ff6f00;
+  color: wheat;
+  gap: 50px;
+}
+.btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btns-container > button {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 220px;
+  height: 80px;
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
