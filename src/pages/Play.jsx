@@ -76,7 +76,7 @@ export default function Play({ setGameOver, setStatus, setWinGame }) {
     handleHotClick();
     setClickedCharacters((prev) => [...prev, clickedChar]);
     setCharacters((prev) => prev.filter((char) => char !== clickedChar));
-    setScore((prev) => prev + 1);
+    setScore((prev) => prev + 5);
   }
   useEffect(() => {
     function selectChar(newChars) {

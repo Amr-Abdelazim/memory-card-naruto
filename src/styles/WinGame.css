@@ -7,12 +7,14 @@
   text-align: center;
   padding: 20px;
 }
+
 .congrats {
   font-family: "Comic Relief", cursive;
   font-size: 2rem;
   margin-bottom: 0.5em;
   text-shadow: 2px 2px 8px #ff6f00;
 }
+
 .congrats h1,
 .congrats h2 {
   margin: 10px 0;
@@ -28,6 +30,10 @@
 
 .btns-container {
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btns-container button {
@@ -44,9 +50,46 @@
   width: 220px;
   height: 80px;
   margin: 10px auto;
-  font-size: 1.5rem;
 }
 
 .btns-container button:hover {
   background-color: #e03d00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .congrats h1 {
+    font-size: 2.3rem;
+  }
+
+  .congrats h2 {
+    font-size: 1.2rem;
+  }
+
+  .btns-container button {
+    width: 180px;
+    height: 70px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .congrats {
+    font-size: 1.5rem;
+  }
+
+  .congrats h1 {
+    font-size: 1.8rem;
+  }
+
+  .congrats h2 {
+    font-size: 1rem;
+  }
+
+  .btns-container button {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
