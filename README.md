@@ -68,9 +68,12 @@ A fun and challenging memory card game based on the Naruto universe! Built with 
 
 - Naruto characters © Masashi Kishimoto  
 - Card images from [Naruto Wiki / Fandom]  
-
+- This project uses the [Dattebayo API](https://api-dattebayo.vercel.app/) to fetch data from the Naruto universe.
+  - Thanks to the creators of the API for making it publicly available!
+    
 ---
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
