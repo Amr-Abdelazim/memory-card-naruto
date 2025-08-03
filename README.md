@@ -1,13 +1,78 @@
-# React + Vite
+# 🌀 Memory Card Naruto Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and challenging memory card game based on the Naruto universe! Built with **React** and powered by **Vite**, this game tests your memory skills with your favorite characters.
 
-Currently, two official plugins are available:
+![Game Screenshot](./screenshots/game-preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# memory-card-naruto
+- 🎴 Naruto-themed memory cards  
+- 🧠 Tracks your best and current score  
+- 📱 Fully responsive design  
+- ⚡️ Built with Vite for lightning-fast development  
+- 🛠 Clean, modular React components  
+
+---
+
+## 📸 Screenshots
+
+| Gameplay                         | Responsive (Mobile View)         |
+|----------------------------------|----------------------------------|
+| ![Desktop](./screenshots/desktop.png) | ![Mobile](./screenshots/mobile.png) |
+
+---
+
+## 📦 Installation & Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://amr-abdelazim.github.io/memory-card-naruto.git
+   cd memory-card-naruto
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Visit in browser**
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 🌐 Live Demo
+
+👉 [Check it out on GitHub Pages](https://amr-abdelazim.github.io/memory-card-naruto/)
+
+---
+
+## 🧪 Technologies Used
+
+- React  
+- Vite  
+- CSS Modules / Custom CSS  
+- GitHub Pages  
+
+---
+
+## 🙌 Acknowledgements
+
+- Naruto characters © Masashi Kishimoto  
+- Card images from [Naruto Wiki / Fandom]
+- This project uses the [Dattebayo API](https://api-dattebayo.vercel.app/) to fetch data from the Naruto universe.
+  - Thanks to the creators of the API for making it publicly available!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
