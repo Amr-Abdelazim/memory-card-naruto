@@ -2,8 +2,6 @@
 
 A fun and challenging memory card game based on the Naruto universe! Built with **React** and powered by **Vite**, this game tests your memory skills with your favorite characters.
 
-![Game Screenshot](./screenshots/game-preview.png)
-
 ---
 
 ## 🚀 Features
@@ -20,7 +18,9 @@ A fun and challenging memory card game based on the Naruto universe! Built with 
 
 | Gameplay                         | Responsive (Mobile View)         |
 |----------------------------------|----------------------------------|
-| ![Desktop](./screenshots/desktop.png) | ![Mobile](./screenshots/mobile.png) |
+| ![Desktop](/screenshots/home-desktop.png) | ![Mobile](/screenshots/home-mobile.png) |
+| ![Desktop](/screenshots/gamePlayDesktop.png) | ![Mobile](/screenshots/gamePlayMobile.png) |
+| ![Desktop](/screenshots/gameoverDesktop.png) | ![Mobile](/screenshots/gameoverMobile.png) |
 
 ---
 
@@ -28,7 +28,7 @@ A fun and challenging memory card game based on the Naruto universe! Built with 
 
 1. **Clone the repository**
    ```bash
-   git clone https://amr-abdelazim.github.io/memory-card-naruto.git
+   git clone https://github.com/Amr-Abdelazim/memory-card-naruto.git
    cd memory-card-naruto
    ```
 
@@ -67,9 +67,7 @@ A fun and challenging memory card game based on the Naruto universe! Built with 
 ## 🙌 Acknowledgements
 
 - Naruto characters © Masashi Kishimoto  
-- Card images from [Naruto Wiki / Fandom]
-- This project uses the [Dattebayo API](https://api-dattebayo.vercel.app/) to fetch data from the Naruto universe.
-  - Thanks to the creators of the API for making it publicly available!
+- Card images from [Naruto Wiki / Fandom]  
 
 ---
 
