@@ -76,7 +76,7 @@ export default function Play({ setGameOver, setStatus, setWinGame }) {
     handleHotClick();
     setClickedCharacters((prev) => [...prev, clickedChar]);
     setCharacters((prev) => prev.filter((char) => char !== clickedChar));
-    setScore((prev) => prev + 5);
+    setScore((prev) => prev + 1);
   }
   useEffect(() => {
     function selectChar(newChars) {
@@ -143,12 +143,12 @@ export default function Play({ setGameOver, setStatus, setWinGame }) {
         <h1>🥵 Max Hot: {maxHot}</h1>
       </div>
       <div className="card-container">
-        {selectedCharacters.map((char) => {
+        {selectedCharacters.map((char,index) => {
           return (
             <div
               className="card"
               onClick={handleCardClick}
-              key={char.id}
+              key={String(char.id)+String(index)}
               id={char.id}
             >
               <img src={char.images[0]} alt={char.name} />

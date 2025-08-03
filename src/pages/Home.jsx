@@ -43,8 +43,7 @@ export default function Home({ setCurrentPage, setGameOver, sound_init }) {
           >
             🌀 Enter the Game
           </button>
-        </div>
-        <button
+          <button
           className="sound-btn"
           onClick={() =>
             setTogelSound((prev) => {
@@ -55,6 +54,8 @@ export default function Home({ setCurrentPage, setGameOver, sound_init }) {
         >
           {togelSound === 1 ? "🔊" : "🔇"}
         </button>
+        </div>
+        
       </div>
 
       <div className="help-popup">

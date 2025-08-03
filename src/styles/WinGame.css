@@ -6,29 +6,33 @@
   color: white;
   text-align: center;
   padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
 }
-
+.wingame-container .status-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 .congrats {
   font-family: "Comic Relief", cursive;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   margin-bottom: 0.5em;
   text-shadow: 2px 2px 8px #ff6f00;
 }
 
-.congrats h1,
-.congrats h2 {
+.congrats h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
   margin: 10px 0;
 }
 
-.congrats h1 {
-  font-size: 3rem;
-}
-
 .congrats h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 10px 0;
 }
 
-.btns-container {
+.wingame-container .btns-container {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +40,7 @@
   gap: 20px;
 }
 
-.btns-container button {
+.wingame-container .btns-container button {
   font-size: 1.2rem;
   padding: 12px 30px;
   border: none;
@@ -52,21 +56,13 @@
   margin: 10px auto;
 }
 
-.btns-container button:hover {
+.wingame-container .btns-container button:hover {
   background-color: #e03d00;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .congrats h1 {
-    font-size: 2.3rem;
-  }
-
-  .congrats h2 {
-    font-size: 1.2rem;
-  }
-
-  .btns-container button {
+  .wingame-container .btns-container button {
     width: 180px;
     height: 70px;
     font-size: 1.1rem;
@@ -74,20 +70,9 @@
 }
 
 @media (max-width: 480px) {
-  .congrats {
-    font-size: 1.5rem;
-  }
-
-  .congrats h1 {
-    font-size: 1.8rem;
-  }
-
-  .congrats h2 {
-    font-size: 1rem;
-  }
-
-  .btns-container button {
-    width: 100%;
+  
+  .wingame-container .btns-container button {
+    width: 180px;
     height: auto;
     padding: 10px 20px;
     font-size: 1rem;

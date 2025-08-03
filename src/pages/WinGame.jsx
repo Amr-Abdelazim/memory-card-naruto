@@ -1,12 +1,29 @@
 import ObitoImage from "../assets/obito.jpeg";
+import ObitoImageMobile from "../assets/obitoMobile.jpeg";
 import "../styles/WinGame.css";
 import AudioController from "../../AudioController";
+import { useState,useEffect } from "react";
 export default function WinGame({
   status,
   setCurrentPage,
   setWinGame,
   setSoundInit,
 }) {
+  const [imageSrc, setImageSrc] = useState(ObitoImage);
+    useEffect(() => {
+      const updateImageSource = () => {
+        if (window.innerWidth <= 768) {
+          setImageSrc(ObitoImageMobile);
+        } else {
+          setImageSrc(ObitoImage);
+        }
+      };
+  
+      updateImageSource();
+      window.addEventListener("resize", updateImageSource);
+  
+      return () => window.removeEventListener("resize", updateImageSource);
+    }, []);
   function goToHome() {
     AudioController.play_morning();
     setSoundInit(1);
@@ -17,7 +34,7 @@ export default function WinGame({
     <div
       className="wingame-container"
       style={{
-        backgroundImage: `url(${ObitoImage})`,
+        backgroundImage: `url(${imageSrc})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100vw",

@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 20px;
+ 
 }
 
 .data-container {
@@ -13,7 +15,7 @@
 
 .data-container h1 {
   font-family: "Comic Relief", cursive;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
   margin-bottom: 0.2em;
   text-shadow: 2px 2px 8px #ff6f00;
   color: #eee;
@@ -22,7 +24,7 @@
 /* Grid container for cards */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   width: 100%;
   max-width: 900px;
@@ -63,7 +65,7 @@
 }
 
 .card p {
-  font-size: 1.2em;
+  font-size: clamp(0.9em, 1.2vw, 1.2em);
   margin: 12px;
 }
 
@@ -92,13 +94,21 @@
 
 /* Tablet view */
 @media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .data-container h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 
 /* Mobile view */
 @media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .data-container h1 {
     font-size: 1.8rem;
   }

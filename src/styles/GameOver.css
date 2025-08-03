@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -9,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.status-container {
+.gameover-container .status-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,7 +23,7 @@
   text-align: center;
 }
 
-.btns-container {
+.gameover-container .btns-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,7 +31,7 @@
   margin-top: 2em;
 }
 
-.btns-container > button {
+.gameover-container .btns-container > button {
   font-size: 1.2rem;
   padding: 12px 30px;
   border: none;
@@ -43,29 +44,36 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 220px;
   height: 80px;
+  transition: all 0.3s ease;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .status-container {
+  .gameover-container .status-container {
     font-size: 1.5rem;
   }
 
-  .btns-container > button {
+  .gameover-container .btns-container > button {
     width: 80%;
     height: 60px;
     font-size: 1.2rem;
   }
+  .gameover-container .btns-container {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-  .status-container {
+  .gameover-container .status-container {
     font-size: 1.2rem;
   }
 
-  .btns-container > button {
+  .gameover-container .btns-container > button {
     width: 90%;
     height: 50px;
     font-size: 1rem;
+  }
+  .gameover-container .btns-container {
+    margin-bottom: 40px;
   }
 }

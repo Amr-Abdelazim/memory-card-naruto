@@ -35,7 +35,7 @@
   box-sizing: border-box;
 }
 
-/* Help Popup */
+/* Help Popup - Positioned at bottom on small screens */
 .help-popup {
   position: fixed;
   top: 20px;
@@ -48,17 +48,24 @@
   z-index: 10;
   font-family: "Comic Relief", cursive;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 /* Welcome Text */
+.welcome-container {
+  max-width: 700px;
+  padding: 1rem;
+  z-index: 2;
+}
+
 .welcome-container h1 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 3vw, 3rem);
   margin-bottom: 0.5em;
   text-shadow: 2px 2px 8px #ff6f00;
 }
 
 .welcome-container p {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 1.5em;
   text-shadow: 1px 1px 6px #ff9800;
 }
@@ -83,10 +90,13 @@
 }
 
 /* Sound Button */
-.sound-btn {
+.welcome-container > button.sound-btn {
   all: unset;
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 2vw, 2rem);
   margin-top: 5px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
 /* Animation */
@@ -101,52 +111,35 @@
   }
 }
 
-/* Responsive Tweaks */
+/* Tablets and below */
 @media (max-width: 768px) {
-  .welcome-container h1 {
-    font-size: 2.2rem;
-  }
-
-  .welcome-container p {
-    font-size: 1.2rem;
-  }
-
-  .welcome-container button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
   .help-popup {
     width: 200px;
     padding: 12px;
     font-size: 0.9rem;
-  }
-
-  .sound-btn {
-    font-size: 1.5rem;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
-  .welcome-container h1 {
-    font-size: 1.8rem;
+  .welcome-container{
+    margin-bottom: 50%;
   }
-
-  .welcome-container p {
-    font-size: 1rem;
-  }
-
   .welcome-container button {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
 
   .help-popup {
-    width: 180px;
+    width: 90%;
     font-size: 0.8rem;
-  }
-
-  .sound-btn {
-    font-size: 1.3rem;
+    padding: 10px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
